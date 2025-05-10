@@ -1,5 +1,9 @@
 package ru.springmvc.config;
 
+<<<<<<< HEAD
+=======
+import org.springframework.beans.factory.annotation.Autowired;
+>>>>>>> origin/main
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -17,6 +21,10 @@ import org.thymeleaf.spring5.view.ThymeleafViewResolver;
 public class SpringConfig implements WebMvcConfigurer {
     private final ApplicationContext applicationContext;
 
+<<<<<<< HEAD
+=======
+    @Autowired
+>>>>>>> origin/main
     public SpringConfig(ApplicationContext applicationContext) {
         this.applicationContext = applicationContext;
     }

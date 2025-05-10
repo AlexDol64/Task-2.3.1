@@ -1,5 +1,6 @@
 package ru.springmvc.controllers;
 
+<<<<<<< HEAD
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -7,12 +8,20 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import ru.springmvc.Service.UserService;
+=======
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.*;
+import ru.springmvc.Servise.UserService;
+>>>>>>> origin/main
 import ru.springmvc.models.User;
 
 import java.util.List;
 
 @Controller
 public class UserController {
+<<<<<<< HEAD
 
     private UserService userService;
 
@@ -21,6 +30,12 @@ public class UserController {
     }
 
     @GetMapping("/users")
+=======
+    @Autowired
+    private UserService userService;
+
+    @RequestMapping("/users")
+>>>>>>> origin/main
     public String showAllUsers(Model model) {
         List<User> allUsers = userService.showAllUsers();
         model.addAttribute("users", allUsers);
@@ -40,14 +55,22 @@ public class UserController {
         return "redirect:/users";
     }
 
+<<<<<<< HEAD
     @PostMapping("/updateInfo")
+=======
+    @RequestMapping("/updateInfo")
+>>>>>>> origin/main
     public String updateUser(@RequestParam("usId") int id, Model model) {
         User user = userService.getUser(id);
         model.addAttribute("user", user);
         return "user-info";
     }
 
+<<<<<<< HEAD
     @PostMapping("/deleteUser")
+=======
+    @RequestMapping("/deleteUser")
+>>>>>>> origin/main
     public String deleteUser(@RequestParam("usId") int id) {
         userService.deleteUser(id);
         return "redirect:/users";

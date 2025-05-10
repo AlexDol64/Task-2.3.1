@@ -6,6 +6,10 @@ import ru.springmvc.models.User;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/main
 import java.util.List;
 
 @Repository
@@ -33,17 +37,28 @@ public class UserDAOImpl implements UserDAO {
     }
 
     @Override
+<<<<<<< HEAD
+=======
+    @Transactional
+>>>>>>> origin/main
     public List<User> showAllUsers() {
         return entityManager.createQuery("select u from User u", User.class).getResultList();
     }
 
     @Override
+<<<<<<< HEAD
+=======
+    @Transactional
+>>>>>>> origin/main
     public User getUser(int id) {
         return entityManager.find(User.class, id);
     }
 
     @Override
+<<<<<<< HEAD
     @Transactional
+=======
+>>>>>>> origin/main
     public void deleteUser(int id) {
         entityManager.createQuery("delete from User where id=:userId")
                 .setParameter("userId", id).executeUpdate();
