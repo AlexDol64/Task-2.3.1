@@ -1,15 +1,11 @@
 package ru.springmvc.models;
 
-<<<<<<< HEAD
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
-=======
-import javax.persistence.*;
->>>>>>> origin/main
 
 @Entity
 @Table(name="users")
@@ -23,34 +19,20 @@ public class User {
     @Column
     private String surname;
     @Column
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/main
     private String email;
     @Column
     private int salary;
 
-<<<<<<< HEAD
 //    public User(String name, String surname, String email, int salary) {
 //        this.name = name;
 //        this.surname = surname;
 //        this.email = email;
 //        this.salary = salary;
 //    }
-=======
-    public User(String name, String surname, String email, int salary) {
-        this.name = name;
-        this.surname = surname;
-        this.email = email;
-        this.salary = salary;
-    }
->>>>>>> origin/main
 
     public User() {
     }
 
-<<<<<<< HEAD
 //    public User(int id, String name, String surname, String email, int salary) {
 //        this.id = id;
 //        this.name = name;
@@ -58,15 +40,6 @@ public class User {
 //        this.email = email;
 //        this.salary = salary;
 //    }
-=======
-    public User(int id, String name, String surname, String email, int salary) {
-        this.id = id;
-        this.name = name;
-        this.surname = surname;
-        this.email = email;
-        this.salary = salary;
-    }
->>>>>>> origin/main
 
     public int getId() {
         return id;

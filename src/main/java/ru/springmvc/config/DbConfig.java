@@ -1,9 +1,5 @@
 package ru.springmvc.config;
 
-<<<<<<< HEAD
-=======
-import org.springframework.beans.factory.annotation.Autowired;
->>>>>>> origin/main
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
@@ -16,10 +12,6 @@ import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
 import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/main
 import javax.sql.DataSource;
 import java.util.Properties;
 
@@ -28,23 +20,13 @@ import java.util.Properties;
 @PropertySource("classpath:db.properties")
 @EnableTransactionManagement
 public class DbConfig {
-<<<<<<< HEAD
 
     private final Environment env;
 
-=======
-    private final Environment env;
-
-    @Autowired
->>>>>>> origin/main
     public DbConfig(Environment env) {
         this.env = env;
     }
 
-<<<<<<< HEAD
-=======
-    @Bean
->>>>>>> origin/main
     public DataSource getDataSource() {
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
         dataSource.setDriverClassName(env.getProperty("db.driver"));
@@ -56,10 +38,6 @@ public class DbConfig {
 
     @Bean
     public LocalContainerEntityManagerFactoryBean entityManagerFactoryBean() {
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/main
         LocalContainerEntityManagerFactoryBean entityManagerFactoryBean = new LocalContainerEntityManagerFactoryBean();
         entityManagerFactoryBean.setJpaVendorAdapter(new HibernateJpaVendorAdapter());
         entityManagerFactoryBean.setDataSource(getDataSource());
@@ -69,10 +47,6 @@ public class DbConfig {
     }
 
     private Properties jpaHibernateProperties() {
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/main
         Properties properties = new Properties();
         properties.put("hibernate.dialect", env.getProperty("hibernate.dialect"));
         properties.put("hibernate.hbm2ddl.auto", env.getProperty("hibernate.hbm2ddl.auto"));
